@@ -1,6 +1,8 @@
 import KaTeX from 'katex';
 import 'katex/dist/katex.min.css';
 
+import './index.css';
+
 class LatexTool {
   static get toolbox() {
     return {
@@ -29,7 +31,7 @@ class LatexTool {
     const addButton = document.createElement('button');
     addButton.innerText = 'Add Equation';
     addButton.classList.add('add-equation-button');
-    addButton.addEventListener('click', () => this.addEquation());
+    addButton.addEventListener('click', (e) => this.addEquation(e));
     this.wrapper.appendChild(addButton);
 
     this.equationContainer = document.createElement('div');
@@ -74,7 +76,9 @@ class LatexTool {
     return eqWrapper;
   }
 
-  addEquation() {
+  addEquation(e) {
+    e.preventDefault();
+
     this.data.equations.push('');
     const newIndex = this.data.equations.length - 1;
     const newEqWrapper = this.createEquationWrapper('', newIndex);
@@ -86,7 +90,7 @@ class LatexTool {
 
   removeEquation(index) {
     this.data.equations.splice(index, 1);
-    this.equationWrappers.forEach(wrapper => wrapper.remove());
+    this.equationWrappers.forEach((wrapper) => wrapper.remove());
     this.equationWrappers = [];
     this.equationContainer.innerHTML = '';
     this.data.equations.forEach((equation, index) => {
@@ -108,14 +112,15 @@ class LatexTool {
   }
 
   renderLatex() {
-    const equations = this.data.equations.map(eq => eq.trim()).filter(eq => eq.length > 0);
+    const equations = this.data.equations.map((eq) => eq.trim()).filter((eq) => eq.length > 0);
     if (equations.length === 0) {
       this.output.textContent = ''; // Clear the output if there are no equations
       return;
     }
-    const systemOfEquations = equations.length > 1 
-      ? `\\left\\{ \\begin{array}{l} ${equations.join(' \\\\[1ex] ')} \\end{array} \\right.`
-      : equations[0];
+    const systemOfEquations =
+      equations.length > 1
+        ? `\\left\\{ \\begin{array}{l} ${equations.join(' \\\\[1ex] ')} \\end{array} \\right.`
+        : equations[0];
 
     try {
       KaTeX.render(systemOfEquations, this.output, {

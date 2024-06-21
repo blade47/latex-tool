@@ -1,0 +1,39 @@
+{
+  "name": "@blade47/editorjs-latex-tool",
+  "version": "1.0.0",
+  "keywords": [
+    "codex editor",
+    "math-tool",
+    "editor.js",
+    "editorjs"
+  ],
+  "description": "Latex Tool for Editor.js",
+  "license": "MIT",
+  "repository": "",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/latex-tool.umd.js",
+  "module": "./dist/latex-tool.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/latex-tool.mjs",
+      "require": "./dist/latex-tool.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "author": {
+    "name": "AFL Solutions SRL"
+  },
+  "devDependencies": {
+    "vite": "^4.5.0",
+    "vite-plugin-css-injected-by-js": "^3.3.0"
+  },
+  "dependencies": {
+    "@codexteam/icons": "^0.0.5",
+    "katex": "^0.16.10"
+  }
+}

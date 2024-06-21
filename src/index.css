@@ -1,0 +1,61 @@
+.add-equation-button {
+  margin: 10px 0;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  color: white;
+}
+
+.add-equation-button:hover {
+  background-color: #218838;
+}
+
+.equation-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.equation-textarea {
+  width: 100%;
+  height: 20px;
+  margin-right: 10px;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace; /* Change font here */
+  font-size: 16px; /* Adjust font size */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  resize: vertical;
+}
+
+.equation-textarea:focus {
+  outline: none;
+  border-color: #66afe9;
+  box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.remove-equation-button {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #dc3545;
+  color: white;
+}
+
+.remove-equation-button:hover {
+  background-color: #c82333;
+}
+
+#output {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}

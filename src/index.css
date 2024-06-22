@@ -1,4 +1,4 @@
-.add-equation-button {
+.add-equation-button-latex-tool {
   margin: 10px 0;
   padding: 10px 15px;
   font-size: 14px;
@@ -9,17 +9,17 @@
   color: white;
 }
 
-.add-equation-button:hover {
+.add-equation-button-latex-tool:hover {
   background-color: #218838;
 }
 
-.equation-wrapper {
+.equation-wrapper-latex-tool {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.equation-textarea {
+.equation-textarea-latex-tool {
   width: 100%;
   height: 20px;
   margin-right: 10px;
@@ -32,13 +32,13 @@
   resize: vertical;
 }
 
-.equation-textarea:focus {
+.equation-textarea-latex-tool:focus {
   outline: none;
   border-color: #66afe9;
   box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
-.remove-equation-button {
+.remove-equation-button-latex-tool {
   padding: 5px 10px;
   font-size: 14px;
   cursor: pointer;
@@ -48,11 +48,11 @@
   color: white;
 }
 
-.remove-equation-button:hover {
+.remove-equation-button-latex-tool:hover {
   background-color: #c82333;
 }
 
-#output {
+#output-latex-tool {
   margin-bottom: 20px;
   padding: 10px;
   border: 1px solid #ccc;

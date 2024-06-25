@@ -144,8 +144,8 @@ fill="#000000" stroke="none">
     }
     const systemOfEquations =
       equations.length > 1
-        ? `\\left\\{ \\begin{array}{l} ${equations.join(' \\\\[1ex] ')} \\end{array} \\right.`
-        : equations[0];
+        ? `\\left\\{ \\begin{aligned} ${equations.join(' \\\\ ')} \\end{aligned} \\right.`
+        : `\\begin{aligned} ${equations[0]} \\end{aligned}`;
 
     try {
       KaTeX.render(systemOfEquations, this.output, {

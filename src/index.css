@@ -24,8 +24,7 @@
   height: 20px;
   margin-right: 10px;
   padding: 10px;
-  font-family: 'Courier New', Courier, monospace; /* Change font here */
-  font-size: 16px; /* Adjust font size */
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
